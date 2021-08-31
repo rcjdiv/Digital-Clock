@@ -16,13 +16,13 @@ body.active{
 
 @font-face {
     font-family: s14;
-    src: url(https://dl.dropbox.com/s/qzty6p6p7nwfhbg/DSEG14Modern-Italic.woff)
+    src: url(https://dl.dropbox.com/s/qzty6p6p7nwfhbg/DSEG14Modern-Italic.woff);
 }
 
 #toggle{
     position: absolute;
-    display: flex;
-    justify-content: flex-start;
+    top: 24%;
+    left: 32%;
     width: 75px;
     height: 35px;
     border-radius:160px;
@@ -36,8 +36,6 @@ body.active{
 
 #toggle .indicator{
     position: absolute;
-    top: 0;
-    left: 0;
     width: 35px;
     height: 35px;
     background: linear-gradient(to bottom, #444, #222);
@@ -54,6 +52,8 @@ body.active{
     box-shadow: inset 0 2px 60px rgba(0,0,0,0.1),
                 inset 0 2px 8px rgba(0,0,0,0.1),
                 inset 0 -4px 8px rgba(0,0,0,0.05);
+
+
 }
 
 #toggle.active .indicator{
@@ -64,40 +64,41 @@ body.active{
                 inset 0 -4px 4px rgba(255,255,255,1);
 }
 
+#seconds-front, #seconds-bg{
+    font-size: 30px;
+}
+
 .clock-out {
     background: rgb(0, 0, 0);
-    height: 120px;
-    width: 420px;
+    height: 320px;
+    width: 620px;
     border-radius: 10px;
     border: 5px solid red;
     position: absolute;
     top: 50%;
     left: 50%;
     margin-right: -50%;
-    transform: translate(-50%, -50%)
+    transform: translate(-50%, -50%);
 }
 
 .clock {
     font-family: s7;
-    font-size: 50px;
+    font-size: 90px;
     font-style: italic;
-    margin-top: 30px;
+    margin-top: 110px;
 }
 
 .time-bg {
     color: rgba(194, 206, 206, 0.12);
     position: absolute;
-    left: 100px
-}
-#seconds-front, #seconds-bg{
-    font-size: 30px;
+    left: 140px;
 }
 
 .time {
     font-family: s14 !important;
-    font-size: 15px;
-    top: 15px;
-    left: -20px;
+    font-size: 35px;
+    top: 35px;
+    left: -40px;
     top: 0px;
     position: absolute;
     font-style: italic;
@@ -106,6 +107,6 @@ body.active{
 .time-front {
     position: absolute;
     color: red;
-    left: 100px;
+    left: 140px;
 }
 
