@@ -1,3 +1,5 @@
+const toggle = document.getElementById('toggle');
+const body = document.querySelector('body');
 var div = document.getElementById('DSEGClock');
     var seconds = document.getElementById('seconds-front');
     var session = document.getElementById('sessin');
@@ -8,28 +10,20 @@ var div = document.getElementById('DSEGClock');
         var s = d.getSeconds();
         var m = d.getMinutes();
         var h = d.getHours();
-        var sesn = "PM";
+        var sesn = "AM";
 
-        if (h > 12) {
-            h = h - 12;
-        }
-        if (h < 10) {
-            h = "0" + h;
-        }
-        if (m < 10) {
-            m = "0" + m;
-        }
-
-        if (h == 0) {
+        if(h == 0){
             h = 12;
         }
-        if (h => 12) {
-            sesn = "AM";
+        
+        if(h > 12){
+            h = h - 12;
+            sesn = "PM";
         }
-
-        if (s < 10) {
-            s = "0" + s;
-        }
+        
+        h = (h < 10) ? "0" + h : h;
+        m = (m < 10) ? "0" + m : m;
+        s = (s < 10) ? "0" + s : s;
 
         div.innerHTML = h + ":" + m;
         seconds.innerHTML = s;
@@ -37,3 +31,8 @@ var div = document.getElementById('DSEGClock');
 
     }
     setInterval(time, 1000);
+
+    toggle.onclick = function (){
+        toggle.classList.toggle('active');
+        body.classList.toggle('active');
+    }
